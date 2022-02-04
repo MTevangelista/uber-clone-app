@@ -1,0 +1,8 @@
+// MARK: - Login
+"loginLogoTitle" = "UBER";
+"loginLogoFontName" = "Avenir-Light";
+"email" = "Email";
+"password" = "Password";
+"signIn" = "Sign In";
+"dontHaveAccount" = "Don't have an account? ";
+"signUp" = "Sign Up";
