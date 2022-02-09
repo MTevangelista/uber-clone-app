@@ -11,6 +11,8 @@
 		6D386AF127A36BE3007D28B5 /* CodeViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D386AF027A36BE3007D28B5 /* CodeViewProtocol.swift */; };
 		6D386AF527A371E0007D28B5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6D386AF427A371E0007D28B5 /* Localizable.strings */; };
 		6D386AF727A37848007D28B5 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D386AF627A37848007D28B5 /* R.generated.swift */; };
+		6D454EF027ACC88500260649 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D454EEF27ACC88500260649 /* SignUpViewController.swift */; };
+		6D454EF427ACC99F00260649 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D454EF327ACC99F00260649 /* LoginViewModel.swift */; };
 		6D587527279E185D000A3327 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D587526279E185D000A3327 /* AppDelegate.swift */; };
 		6D587529279E185D000A3327 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D587528279E185D000A3327 /* SceneDelegate.swift */; };
 		6D587530279E1861000A3327 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D58752F279E1861000A3327 /* Assets.xcassets */; };
@@ -30,6 +32,8 @@
 		6D386AF027A36BE3007D28B5 /* CodeViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeViewProtocol.swift; sourceTree = "<group>"; };
 		6D386AF427A371E0007D28B5 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		6D386AF627A37848007D28B5 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		6D454EEF27ACC88500260649 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		6D454EF327ACC99F00260649 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		6D587523279E185D000A3327 /* UberCloneApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UberCloneApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D587526279E185D000A3327 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6D587528279E185D000A3327 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +100,30 @@
 				6D386AF027A36BE3007D28B5 /* CodeViewProtocol.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		6D454EED27ACC86900260649 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				6D454EEE27ACC86F00260649 /* Controller */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		6D454EEE27ACC86F00260649 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6D454EEF27ACC88500260649 /* SignUpViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6D454EF127ACC98600260649 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6D454EF327ACC99F00260649 /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		6D58751A279E185D000A3327 = {
@@ -175,6 +203,7 @@
 		6D58753F279E1B01000A3327 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				6D454EED27ACC86900260649 /* SignUp */,
 				6D587540279E1B10000A3327 /* Login */,
 			);
 			path = Module;
@@ -185,6 +214,7 @@
 			children = (
 				6D1111E027A367D000E33A12 /* View */,
 				6D587541279E1B2E000A3327 /* ViewController */,
+				6D454EF127ACC98600260649 /* ViewModel */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -367,7 +397,9 @@
 				6D82772727A4B1A10098B2CD /* UITextField+Extension.swift in Sources */,
 				6D1111E227A367E600E33A12 /* LoginView.swift in Sources */,
 				6D82772B27A4C5540098B2CD /* SperatorPosition.swift in Sources */,
+				6D454EF427ACC99F00260649 /* LoginViewModel.swift in Sources */,
 				6DCC24C627A8042A000433D9 /* UIView+Extension.swift in Sources */,
+				6D454EF027ACC88500260649 /* SignUpViewController.swift in Sources */,
 				6D386AF727A37848007D28B5 /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

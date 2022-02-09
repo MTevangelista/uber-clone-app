@@ -1,6 +1,7 @@
 import SnapKit
 
 protocol LoginViewDelegate: AnyObject {
+    func didSelectSignUpButton()
     func didSelectLoginButton()
 }
 
@@ -107,6 +108,7 @@ final class LoginView: UIView {
         
         attributedTitle.append(NSAttributedString(string: R.string.localizable.signUp(), attributes: signUpTextAttributes))
         button.setAttributedTitle(attributedTitle, for: .normal)
+        button.addTarget(self, action: #selector(didSelectSignUpButton), for: .touchUpInside)
         return button
     }()
     
@@ -128,6 +130,11 @@ final class LoginView: UIView {
     @objc
     private func didSelectLoginButton() {
         delegate?.didSelectLoginButton()
+    }
+    
+    @objc
+    private func didSelectSignUpButton() {
+        delegate?.didSelectSignUpButton()
     }
     
     private func setAttributes(

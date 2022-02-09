@@ -1,11 +1,22 @@
 import UIKit
 
-class LoginViewController: UIViewController {
+final class LoginViewController: UIViewController {
     
     private lazy var loginVew = LoginView()
     
+    private var viewModel: LoginViewModel
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         .lightContent
+    }
+    
+    init(viewModel: LoginViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     override func loadView() {
@@ -15,12 +26,23 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureNavigationBar()
+    }
+    
+    private func configureNavigationBar() {
+        navigationController?.navigationBar.isHidden = true
+        navigationController?.navigationBar.barStyle = .black
     }
 }
 
 extension LoginViewController: LoginViewDelegate {
     
+    func didSelectSignUpButton() {
+        let controller = SignUpViewController()
+        navigationController?.pushViewController(controller, animated: true)
+    }
+
     func didSelectLoginButton() {
-        print("the action  was called")
+        viewModel.handleSignIn()
     }
 }
