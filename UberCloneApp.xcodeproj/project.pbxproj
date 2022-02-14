@@ -21,6 +21,9 @@
 		6D82772527A4B0FD0098B2CD /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D82772427A4B0FD0098B2CD /* UIStackView+Extension.swift */; };
 		6D82772727A4B1A10098B2CD /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D82772627A4B1A10098B2CD /* UITextField+Extension.swift */; };
 		6D82772B27A4C5540098B2CD /* SperatorPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D82772A27A4C5540098B2CD /* SperatorPosition.swift */; };
+		6DB32E8827B356510061DD24 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB32E8727B356510061DD24 /* SignUpView.swift */; };
+		6DB32E8B27B359A60061DD24 /* AuthenticationViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB32E8A27B359A60061DD24 /* AuthenticationViewDelegate.swift */; };
+		6DB32E8D27B35AA90061DD24 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB32E8C27B35AA90061DD24 /* SignUpViewModel.swift */; };
 		6DCC24C627A8042A000433D9 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCC24C527A8042A000433D9 /* UIView+Extension.swift */; };
 		E7E97C22A764291304DD5823 /* Pods_UberCloneApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0683B7C9A19F455C7C297BFC /* Pods_UberCloneApp.framework */; };
 /* End PBXBuildFile section */
@@ -44,6 +47,9 @@
 		6D82772427A4B0FD0098B2CD /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
 		6D82772627A4B1A10098B2CD /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		6D82772A27A4C5540098B2CD /* SperatorPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SperatorPosition.swift; sourceTree = "<group>"; };
+		6DB32E8727B356510061DD24 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		6DB32E8A27B359A60061DD24 /* AuthenticationViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewDelegate.swift; sourceTree = "<group>"; };
+		6DB32E8C27B35AA90061DD24 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		6DCC24C527A8042A000433D9 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		B4DBE5594BECADC617A09DF1 /* Pods-UberCloneApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UberCloneApp.debug.xcconfig"; path = "Target Support Files/Pods-UberCloneApp/Pods-UberCloneApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				6D386AF027A36BE3007D28B5 /* CodeViewProtocol.swift */,
+				6DB32E8A27B359A60061DD24 /* AuthenticationViewDelegate.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -105,17 +112,19 @@
 		6D454EED27ACC86900260649 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
-				6D454EEE27ACC86F00260649 /* Controller */,
+				6DB32E8527B3560C0061DD24 /* View */,
+				6D454EEE27ACC86F00260649 /* ViewController */,
+				6DB32E8627B356140061DD24 /* ViewModel */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
 		};
-		6D454EEE27ACC86F00260649 /* Controller */ = {
+		6D454EEE27ACC86F00260649 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				6D454EEF27ACC88500260649 /* SignUpViewController.swift */,
 			);
-			path = Controller;
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		6D454EF127ACC98600260649 /* ViewModel */ = {
@@ -243,6 +252,22 @@
 				6D82772A27A4C5540098B2CD /* SperatorPosition.swift */,
 			);
 			path = Enum;
+			sourceTree = "<group>";
+		};
+		6DB32E8527B3560C0061DD24 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6DB32E8727B356510061DD24 /* SignUpView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6DB32E8627B356140061DD24 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6DB32E8C27B35AA90061DD24 /* SignUpViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		AA46884E6E856FC4CD6E3976 /* Pods */ = {
@@ -395,8 +420,11 @@
 				6D587543279E1B3D000A3327 /* LoginViewController.swift in Sources */,
 				6D587529279E185D000A3327 /* SceneDelegate.swift in Sources */,
 				6D82772727A4B1A10098B2CD /* UITextField+Extension.swift in Sources */,
+				6DB32E8B27B359A60061DD24 /* AuthenticationViewDelegate.swift in Sources */,
+				6DB32E8D27B35AA90061DD24 /* SignUpViewModel.swift in Sources */,
 				6D1111E227A367E600E33A12 /* LoginView.swift in Sources */,
 				6D82772B27A4C5540098B2CD /* SperatorPosition.swift in Sources */,
+				6DB32E8827B356510061DD24 /* SignUpView.swift in Sources */,
 				6D454EF427ACC99F00260649 /* LoginViewModel.swift in Sources */,
 				6DCC24C627A8042A000433D9 /* UIView+Extension.swift in Sources */,
 				6D454EF027ACC88500260649 /* SignUpViewController.swift in Sources */,

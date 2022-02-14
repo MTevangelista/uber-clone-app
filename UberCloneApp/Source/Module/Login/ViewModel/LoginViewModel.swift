@@ -5,5 +5,7 @@ final class LoginViewModel {
     
     init() {}
     
-    func handleSignIn() {}
+    func handleSignIn() {
+        
+    }
 }

@@ -35,14 +35,19 @@ final class LoginViewController: UIViewController {
     }
 }
 
-extension LoginViewController: LoginViewDelegate {
+extension LoginViewController: AuthenticationViewDelegate {
     
     func didSelectSignUpButton() {
-        let controller = SignUpViewController()
+        let controller = SignUpViewController(viewModel: SignUpViewModel())
         navigationController?.pushViewController(controller, animated: true)
     }
 
     func didSelectLoginButton() {
         viewModel.handleSignIn()
     }
+    
+    func didSelectSegmentControl() {
+        //
+    }
+    
 }

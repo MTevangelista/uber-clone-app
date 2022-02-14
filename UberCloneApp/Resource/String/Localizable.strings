@@ -1,8 +1,10 @@
-// MARK: - Login
+// MARK: - Authentication (Sign In and Sign Up)
 "loginLogoTitle" = "UBER";
 "loginLogoFontName" = "Avenir-Light";
 "email" = "Email";
+"fullName" = "Full Name";
 "password" = "Password";
 "signIn" = "Sign In";
 "dontHaveAccount" = "Don't have an account? ";
+"alreadyHaveAccount" = "Already have an account? ";
 "signUp" = "Sign Up";

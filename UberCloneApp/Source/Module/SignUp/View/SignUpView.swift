@@ -1,6 +1,6 @@
 import SnapKit
 
-final class LoginView: UIView {
+final class SignUpView: UIView {
     
     private let iconSize: CGFloat = 24
     
@@ -46,6 +46,31 @@ final class LoginView: UIView {
         return textField
     }()
     
+    private lazy var fullNameStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .horizontal
+        return stackView
+    }()
+    
+    private lazy var personImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: R.image.person.name)
+        imageView.contentMode = .left
+        imageView.tintColor = .white
+        imageView.alpha = 0.87
+        return imageView
+    }()
+    
+    private lazy var fullNameTextField: UITextField = {
+        let textField = UITextField()
+        textField.placeholder = R.string.localizable.fullName()
+        textField.textContentType = .name
+        textField.font = UIFont.systemFont(ofSize: 16)
+        textField.keyboardAppearance = .dark
+        textField.autocorrectionType = .no
+        return textField
+    }()
+    
     private lazy var passwordStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
@@ -76,34 +101,43 @@ final class LoginView: UIView {
         textField.keyboardAppearance = .dark
         textField.isSecureTextEntry = true
         textField.textContentType = .password
-        textField.setRightImageViewButton(passwordToggleButton) 
+        textField.setRightImageViewButton(passwordToggleButton)
         return textField
     }()
     
-    private lazy var loginButton: UIButton = {
+    private lazy var accountTypeSegmentedControl: UISegmentedControl = {
+        let segmentItems = ["Rider", "Driver"]
+        let control = UISegmentedControl(items: segmentItems)
+        control.tintColor = UIColor(white: 1, alpha: 0.87)
+        control.selectedSegmentIndex = 0
+        control.addTarget(self, action: #selector(didSelectSegmentControl), for: .valueChanged)
+        return control
+    }()
+    
+    private lazy var signUpButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle(R.string.localizable.signIn(), for: .normal)
+        button.setTitle(R.string.localizable.signUp(), for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.backgroundColor = .systemBlue
         button.layer.cornerRadius = 5
-        button.addTarget(self, action: #selector(didSelectLoginButton), for: .touchUpInside)
+        button.addTarget(self, action: #selector(didSelectSignUpButton), for: .touchUpInside)
         return button
     }()
     
-    private lazy var dontHaveAccountButton: UIButton = {
+    private lazy var alreadyHaveAccountButton: UIButton = {
         let button = UIButton(type: .system)
-        let dontHaveAccountTextAttributes: [NSAttributedString.Key : NSObject] = setAttributes(font: .systemFont(ofSize: 16),
+        let alreadyHaveAccountTextAttributes: [NSAttributedString.Key : NSObject] = setAttributes(font: .systemFont(ofSize: 16),
                                                                                                color: .lightGray)
         
-        let attributedTitle = NSMutableAttributedString(string: R.string.localizable.dontHaveAccount(),
-                                                        attributes: dontHaveAccountTextAttributes)
+        let attributedTitle = NSMutableAttributedString(string: R.string.localizable.alreadyHaveAccount(),
+                                                        attributes: alreadyHaveAccountTextAttributes)
         
         let signUpTextAttributes: [NSAttributedString.Key : NSObject] = setAttributes(font: .boldSystemFont(ofSize: 16),
                                                                                       color: .systemBlue)
         
-        attributedTitle.append(NSAttributedString(string: R.string.localizable.signUp(), attributes: signUpTextAttributes))
+        attributedTitle.append(NSAttributedString(string: R.string.localizable.signIn(), attributes: signUpTextAttributes))
         button.setAttributedTitle(attributedTitle, for: .normal)
-        button.addTarget(self, action: #selector(didSelectSignUpButton), for: .touchUpInside)
+        button.addTarget(self, action: #selector(didSelectLoginButton), for: .touchUpInside)
         return button
     }()
     
@@ -114,6 +148,13 @@ final class LoginView: UIView {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func setAttributes(
+        font: UIFont,
+        color: UIColor
+    ) -> [NSAttributedString.Key : NSObject] {
+        [.font: font, .foregroundColor: color]
     }
     
     @objc
@@ -132,23 +173,24 @@ final class LoginView: UIView {
         delegate?.didSelectSignUpButton()
     }
     
-    private func setAttributes(
-        font: UIFont, color: UIColor)
-    -> [NSAttributedString.Key : NSObject] {
-        [.font: font, .foregroundColor: color]
+    @objc
+    func didSelectSegmentControl(_ segmentedControl: UISegmentedControl) {
+        delegate?.didSelectSegmentControl()
     }
 }
 
-extension LoginView: CodeViewProtocol {
+extension SignUpView: CodeViewProtocol {
     
     func buildHierarchy() {
         addSubview(titleLabel)
         addSubview(formStackView)
-        addSubview(dontHaveAccountButton)
+        addSubview(alreadyHaveAccountButton)
         
         emailStackView.addArrangedSubviews(children: [envelopeImageView, emailTextField])
+        fullNameStackView.addArrangedSubviews(children: [personImageView, fullNameTextField])
         passwordStackView.addArrangedSubviews(children: [lockImageView, passwordTextField])
-        formStackView.addArrangedSubviews(children: [emailStackView, passwordStackView, loginButton])
+        formStackView.addArrangedSubviews(children: [emailStackView, fullNameStackView, passwordStackView,
+                                                     accountTypeSegmentedControl ,signUpButton])
     }
     
     func setupConstraints() {
@@ -168,15 +210,19 @@ extension LoginView: CodeViewProtocol {
             make.leading.equalTo(envelopeImageView).offset(iconSize + 8)
         }
         
+        fullNameTextField.snp.makeConstraints { make in
+            make.leading.equalTo(personImageView).offset(iconSize + 8)
+        }
+        
         passwordTextField.snp.makeConstraints { make in
             make.leading.equalTo(lockImageView).offset(iconSize + 8)
         }
         
-        loginButton.snp.makeConstraints { make in
+        signUpButton.snp.makeConstraints { make in
             make.height.equalTo(35)
         }
         
-        dontHaveAccountButton.snp.makeConstraints { make in
+        alreadyHaveAccountButton.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.bottom.equalTo(safeAreaLayoutGuide.snp.bottom)
         }
@@ -185,6 +231,7 @@ extension LoginView: CodeViewProtocol {
     func applyAdditionalChanges() {
         backgroundColor = UIColor(red: 25/255, green: 25/255, blue: 25/255, alpha: 1)
         emailTextField.addOutline(anchorView: formStackView, position: .below)
+        fullNameTextField.addOutline(anchorView: formStackView, position: .below)
         passwordTextField.addOutline(anchorView: formStackView, position: .below)
     }
 }
