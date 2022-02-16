@@ -11,6 +11,11 @@
 		6D386AF127A36BE3007D28B5 /* CodeViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D386AF027A36BE3007D28B5 /* CodeViewProtocol.swift */; };
 		6D386AF527A371E0007D28B5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6D386AF427A371E0007D28B5 /* Localizable.strings */; };
 		6D386AF727A37848007D28B5 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D386AF627A37848007D28B5 /* R.generated.swift */; };
+		6D40EB6F27BAAC2C002150A9 /* FormStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D40EB6E27BAAC2C002150A9 /* FormStateView.swift */; };
+		6D40EB7127BAAC86002150A9 /* FormStateViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D40EB7027BAAC86002150A9 /* FormStateViewType.swift */; };
+		6D40EB7727BAAEAC002150A9 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D40EB7627BAAEAC002150A9 /* ButtonView.swift */; };
+		6D40EB7A27BAAFC9002150A9 /* CallToAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D40EB7927BAAFC9002150A9 /* CallToAction.swift */; };
+		6D40EB7D27BAB273002150A9 /* FormStateViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D40EB7C27BAB273002150A9 /* FormStateViewData.swift */; };
 		6D454EF027ACC88500260649 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D454EEF27ACC88500260649 /* SignUpViewController.swift */; };
 		6D454EF427ACC99F00260649 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D454EF327ACC99F00260649 /* LoginViewModel.swift */; };
 		6D587527279E185D000A3327 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D587526279E185D000A3327 /* AppDelegate.swift */; };
@@ -19,12 +24,10 @@
 		6D587533279E1861000A3327 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D587531279E1861000A3327 /* LaunchScreen.storyboard */; };
 		6D587543279E1B3D000A3327 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D587542279E1B3D000A3327 /* LoginViewController.swift */; };
 		6D82772527A4B0FD0098B2CD /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D82772427A4B0FD0098B2CD /* UIStackView+Extension.swift */; };
-		6D82772727A4B1A10098B2CD /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D82772627A4B1A10098B2CD /* UITextField+Extension.swift */; };
 		6D82772B27A4C5540098B2CD /* SperatorPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D82772A27A4C5540098B2CD /* SperatorPosition.swift */; };
 		6DB32E8827B356510061DD24 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB32E8727B356510061DD24 /* SignUpView.swift */; };
 		6DB32E8B27B359A60061DD24 /* AuthenticationViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB32E8A27B359A60061DD24 /* AuthenticationViewDelegate.swift */; };
 		6DB32E8D27B35AA90061DD24 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB32E8C27B35AA90061DD24 /* SignUpViewModel.swift */; };
-		6DCC24C627A8042A000433D9 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCC24C527A8042A000433D9 /* UIView+Extension.swift */; };
 		E7E97C22A764291304DD5823 /* Pods_UberCloneApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0683B7C9A19F455C7C297BFC /* Pods_UberCloneApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +38,11 @@
 		6D386AF027A36BE3007D28B5 /* CodeViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeViewProtocol.swift; sourceTree = "<group>"; };
 		6D386AF427A371E0007D28B5 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		6D386AF627A37848007D28B5 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		6D40EB6E27BAAC2C002150A9 /* FormStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormStateView.swift; sourceTree = "<group>"; };
+		6D40EB7027BAAC86002150A9 /* FormStateViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormStateViewType.swift; sourceTree = "<group>"; };
+		6D40EB7627BAAEAC002150A9 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		6D40EB7927BAAFC9002150A9 /* CallToAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallToAction.swift; sourceTree = "<group>"; };
+		6D40EB7C27BAB273002150A9 /* FormStateViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormStateViewData.swift; sourceTree = "<group>"; };
 		6D454EEF27ACC88500260649 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		6D454EF327ACC99F00260649 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		6D587523279E185D000A3327 /* UberCloneApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UberCloneApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,12 +53,10 @@
 		6D587534279E1861000A3327 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D587542279E1B3D000A3327 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6D82772427A4B0FD0098B2CD /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
-		6D82772627A4B1A10098B2CD /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		6D82772A27A4C5540098B2CD /* SperatorPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SperatorPosition.swift; sourceTree = "<group>"; };
 		6DB32E8727B356510061DD24 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		6DB32E8A27B359A60061DD24 /* AuthenticationViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewDelegate.swift; sourceTree = "<group>"; };
 		6DB32E8C27B35AA90061DD24 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
-		6DCC24C527A8042A000433D9 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		B4DBE5594BECADC617A09DF1 /* Pods-UberCloneApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UberCloneApp.debug.xcconfig"; path = "Target Support Files/Pods-UberCloneApp/Pods-UberCloneApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,6 +99,7 @@
 		6D386AEE27A36BC2007D28B5 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				6D40EB7827BAAFB0002150A9 /* Helper */,
 				6D82772927A4C5410098B2CD /* Enum */,
 				6D82772327A4B0720098B2CD /* Extension */,
 				6D386AEF27A36BCD007D28B5 /* Protocol */,
@@ -107,6 +114,57 @@
 				6DB32E8A27B359A60061DD24 /* AuthenticationViewDelegate.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		6D40EB6C27BAABD6002150A9 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				6D40EB7427BAAE83002150A9 /* Button */,
+				6D40EB6D27BAAC01002150A9 /* FormState */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		6D40EB6D27BAAC01002150A9 /* FormState */ = {
+			isa = PBXGroup;
+			children = (
+				6D40EB7327BAAD0B002150A9 /* Enum */,
+				6D40EB7227BAAD02002150A9 /* View */,
+				6D40EB7C27BAB273002150A9 /* FormStateViewData.swift */,
+			);
+			path = FormState;
+			sourceTree = "<group>";
+		};
+		6D40EB7227BAAD02002150A9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6D40EB6E27BAAC2C002150A9 /* FormStateView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6D40EB7327BAAD0B002150A9 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				6D40EB7027BAAC86002150A9 /* FormStateViewType.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		6D40EB7427BAAE83002150A9 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				6D40EB7627BAAEAC002150A9 /* ButtonView.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		6D40EB7827BAAFB0002150A9 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				6D40EB7927BAAFC9002150A9 /* CallToAction.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		6D454EED27ACC86900260649 /* SignUp */ = {
@@ -179,6 +237,7 @@
 			children = (
 				6D58753C279E19F7000A3327 /* Application */,
 				6D386AEE27A36BC2007D28B5 /* Common */,
+				6D40EB6C27BAABD6002150A9 /* Component */,
 				6D58753F279E1B01000A3327 /* Module */,
 				6D58753E279E1A51000A3327 /* Service */,
 			);
@@ -240,8 +299,6 @@
 			isa = PBXGroup;
 			children = (
 				6D82772427A4B0FD0098B2CD /* UIStackView+Extension.swift */,
-				6D82772627A4B1A10098B2CD /* UITextField+Extension.swift */,
-				6DCC24C527A8042A000433D9 /* UIView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -418,16 +475,19 @@
 				6D82772527A4B0FD0098B2CD /* UIStackView+Extension.swift in Sources */,
 				6D587527279E185D000A3327 /* AppDelegate.swift in Sources */,
 				6D587543279E1B3D000A3327 /* LoginViewController.swift in Sources */,
+				6D40EB7D27BAB273002150A9 /* FormStateViewData.swift in Sources */,
 				6D587529279E185D000A3327 /* SceneDelegate.swift in Sources */,
-				6D82772727A4B1A10098B2CD /* UITextField+Extension.swift in Sources */,
 				6DB32E8B27B359A60061DD24 /* AuthenticationViewDelegate.swift in Sources */,
 				6DB32E8D27B35AA90061DD24 /* SignUpViewModel.swift in Sources */,
+				6D40EB7727BAAEAC002150A9 /* ButtonView.swift in Sources */,
 				6D1111E227A367E600E33A12 /* LoginView.swift in Sources */,
 				6D82772B27A4C5540098B2CD /* SperatorPosition.swift in Sources */,
+				6D40EB7127BAAC86002150A9 /* FormStateViewType.swift in Sources */,
 				6DB32E8827B356510061DD24 /* SignUpView.swift in Sources */,
+				6D40EB7A27BAAFC9002150A9 /* CallToAction.swift in Sources */,
 				6D454EF427ACC99F00260649 /* LoginViewModel.swift in Sources */,
-				6DCC24C627A8042A000433D9 /* UIView+Extension.swift in Sources */,
 				6D454EF027ACC88500260649 /* SignUpViewController.swift in Sources */,
+				6D40EB6F27BAAC2C002150A9 /* FormStateView.swift in Sources */,
 				6D386AF727A37848007D28B5 /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

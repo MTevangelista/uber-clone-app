@@ -1,10 +1,13 @@
-// MARK: - Authentication (Sign In and Sign Up)
+// MARK: - FormStateView (Sign In and Sign Up)
+
 "loginLogoTitle" = "UBER";
 "loginLogoFontName" = "Avenir-Light";
 "email" = "Email";
-"fullName" = "Full Name";
+"fullName" = "Fullname";
 "password" = "Password";
-"signIn" = "Sign In";
+"rider" = "Rider";
+"driver" = "Driver";
 "dontHaveAccount" = "Don't have an account? ";
 "alreadyHaveAccount" = "Already have an account? ";
+"signIn" = "Sign In";
 "signUp" = "Sign Up";
