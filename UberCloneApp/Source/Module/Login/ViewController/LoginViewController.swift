@@ -4,13 +4,13 @@ final class LoginViewController: UIViewController {
     
     private lazy var loginVew = LoginView()
     
-    private var viewModel: LoginViewModel
+    private var viewModel: LoginViewModelProtocol
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         .lightContent
     }
     
-    init(viewModel: LoginViewModel) {
+    init(viewModel: LoginViewModelProtocol) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -36,18 +36,12 @@ final class LoginViewController: UIViewController {
 }
 
 extension LoginViewController: AuthenticationViewDelegate {
-    
     func didSelectSignUpButton() {
-        let controller = SignUpViewController(viewModel: SignUpViewModel())
-        navigationController?.pushViewController(controller, animated: true)
+        guard let navigationController = navigationController else { return }
+        viewModel.navigateTo(navigationController: navigationController)
     }
-
+    
     func didSelectLoginButton() {
         viewModel.handleSignIn()
     }
-    
-    func didSelectSegmentControl() {
-        //
-    }
-    
 }

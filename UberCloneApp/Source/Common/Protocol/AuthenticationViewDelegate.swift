@@ -3,3 +3,8 @@ protocol AuthenticationViewDelegate: AnyObject {
     func didSelectLoginButton()
     func didSelectSegmentControl()
 }
+
+extension AuthenticationViewDelegate {
+    
+    func didSelectSegmentControl() {}
+}
